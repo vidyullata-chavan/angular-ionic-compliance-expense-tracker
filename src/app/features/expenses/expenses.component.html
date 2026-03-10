@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-card style="box-shadow: none;padding: 0;margin: 0;">
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-text class="total-text">
+              <h2>Total</h2>
+              <p color="primary">₹{{ totalExpenses }}</p>
+            </ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-text class="compliant-text">
+              <h2>Compliant</h2>
+              <p color="success">{{ compliantExpenses }}</p>
+            </ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-text class="noncompliant-text">
+              <h2>Non‑compliant</h2>
+              <p color="warning">{{ nonCompliantExpenses }}</p>
+            </ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    @for (expense of expenseList; track $index) {
+    <ion-item>
+      <ion-label>
+        <h2>{{ expense.vendor }} - {{ expense.category }}</h2>
+        <p>{{ expense.date }} | ₹{{ expense.amount }}</p>
+      </ion-label>
+      <ion-badge [color]="expense.complianceStatus === 'valid' ? 'success' : 'warning'">
+        {{ expense.complianceStatus }}
+      </ion-badge>
+    </ion-item>
+    }
+  </ion-list>
+
+</ion-content>
