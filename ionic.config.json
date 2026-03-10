@@ -1,0 +1,7 @@
+{
+  "name": "VC Expense Tracker",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
