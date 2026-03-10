@@ -1,17 +1,33 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Expenses
     </ion-title>
   </ion-toolbar>
+</ion-header> -->
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title slot="start">Expenses</ion-title>
+    <ion-buttons class="add-expense-btn" slot="end">
+      <ion-button (click)="addExpense()">
+        <ion-icon name="add-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <!-- Add new expense button -->
+  <!-- <ion-buttons slot="end">
+    <ion-button (click)="addExpense()">
+      <ion-icon name="add"></ion-icon>
+    </ion-button>
+  </ion-buttons> -->
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title size="large">Expenses</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <app-explore-container name="Expenses page"></app-explore-container>
 </ion-content>

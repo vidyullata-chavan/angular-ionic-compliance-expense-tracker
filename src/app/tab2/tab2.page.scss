@@ -1,0 +1,14 @@
+.add-expense-btn {
+    // margin-right: 10px;
+
+    ion-button {
+        --background: var(--ion-color-primary);
+        --color: #fff;
+
+        ion-icon {
+            font-size: 30px;
+            font-weight: bold;
+            color: var(--ion-color-light);
+        }
+    }
+}
